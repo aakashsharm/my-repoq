@@ -1,0 +1,13 @@
+package package2;
+
+import gmail.Tictoeadvance;
+
+public class pack2 {
+
+	public static void main(String[] args) {
+
+		 Tictoeadvance tic= new Tictoeadvance();
+		 
+	}
+
+}

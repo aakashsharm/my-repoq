@@ -1,0 +1,49 @@
+package gmail;
+import java.util.concurrent.TimeUnit;
+import java.sql.*;
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+public class tictoeadvance {
+
+	public static void main(String[] args) throws InterruptedException, ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		FirefoxDriver d=new FirefoxDriver();
+		d.get("http://10.0.1.86/tatoc/");
+		d.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		d.findElementByLinkText("Advanced Course").click();
+
+	Actions act=new Actions(d);
+	act.moveToElement(d.findElementByXPath("//div[@class='menutop m2']")).click().build().perform();
+	d.findElementByXPath("//span[contains(text(),'Go Next')]").click();
+	
+	
+	  Connection conn = null;
+	   Statement stmt = null;
+	  conn = DriverManager.getConnection("10.0.1.86","tatocuser","tatoc01");
+	   Class.forName("com.mysql.jdbc.Driver");
+	   System.out.println("Creating statement...");
+	      stmt = conn.createStatement();
+	      String sql;
+	      sql = "Select  * from identity";
+	      ResultSet rs = stmt.executeQuery(sql);
+	      while(rs.next()){
+	          //Retrieve by column name
+	          int id  = rs.getInt("identity");
+	          int age = rs.getInt("credentials");
+	          String first = rs.getString("first");
+	          String last = rs.getString("last");
+
+	          //Display values
+	          rs.close();
+	          stmt.close();
+	          conn.close();
+	       }
+	}
+	
+	
+	
+}

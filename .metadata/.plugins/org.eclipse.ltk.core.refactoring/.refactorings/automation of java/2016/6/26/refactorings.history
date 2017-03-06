@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;gmail.tictoeadvance.java&apos; to &apos;Tictoeadvance.java&apos;&#x0D;&#x0A;- Original project: &apos;automation of java&apos;&#x0D;&#x0A;- Original element: &apos;gmail.tictoeadvance.java&apos;&#x0D;&#x0A;- Renamed element: &apos;gmail.Tictoeadvance.java&apos;" description="Rename compilation unit &apos;tictoeadvance.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;gmail{tictoeadvance.java" name="Tictoeadvance.java" references="false" stamp="1466749057636" version="1.0"/>
+</session>

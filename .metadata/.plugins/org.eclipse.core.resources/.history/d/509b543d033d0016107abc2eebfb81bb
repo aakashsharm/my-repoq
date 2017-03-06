@@ -1,0 +1,13 @@
+package gmail;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class tatoc {
+
+	public static void main(String[] args) {
+		FirefoxDriver d=new FirefoxDriver();
+		d.get("http://10.0.1.86/tatoc/advanced/rest");
+
+	}
+
+}

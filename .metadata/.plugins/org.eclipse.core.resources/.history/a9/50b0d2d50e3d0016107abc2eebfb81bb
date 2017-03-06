@@ -1,0 +1,19 @@
+package gmail;
+
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.SessionId;
+
+public class tatoc {
+
+	public static void main(String[] args) {
+		FirefoxDriver d=new FirefoxDriver();
+		d.get("http://10.0.1.86/tatoc/advanced/rest");
+		String s=d.findElementByXPath(".//*[@id='session_id']").getText().substring(12);
+	System.out.println(s);
+
+SessionId p=d.getSessionId();
+System.out.println(p);
+	}
+
+}

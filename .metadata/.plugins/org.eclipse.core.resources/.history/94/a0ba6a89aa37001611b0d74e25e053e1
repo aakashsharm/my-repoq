@@ -1,0 +1,27 @@
+package gmail;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+public class tictoeadvance {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		FirefoxDriver d=new FirefoxDriver();
+		d.get("http://10.0.1.86/tatoc/");
+		d.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		d.findElementByLinkText("Advanced Course").click();
+
+	Actions act=new Actions(d);
+	act.moveToElement(d.findElementByXPath("//div[@class='menutop m2']")).click().build().perform();
+	d.findElementByLinkText(".//div[@class='menutop m2']//span[contains(text(),'Go Next')]").click();
+	
+	}
+	
+	
+	
+}
